@@ -1,0 +1,650 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sjasthi/100-plus-python-coding-problems-with-solutions/blob/master/CSCI%201101_Lab7_Solution\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "RzxTmUSMGOms"
+      },
+      "outputs": [],
+      "source": [
+        "#@title 1.First_last6\n",
+        "#https://codingbat.com/prob/p181624\n",
+        "\n",
+        "def first_last6(nums):\n",
+        "  if nums[-1]==6:\n",
+        "   return True\n",
+        "  if nums[0]==6:\n",
+        "    return True\n",
+        "  else:\n",
+        "    return False\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 1.First_last6 (one liner)\n",
+        "#https://codingbat.com/prob/p181624\n",
+        "\n",
+        "def first_last6(nums):\n",
+        "   return (nums[-1] == 6)  or (nums[0] == 6)\n",
+        "\n",
+        "    # True or False  --> True\n",
+        "    # False or True  --> True\n",
+        "    # True or True   --> True\n",
+        "    # False or False --> False\n"
+      ],
+      "metadata": {
+        "id": "pHCvH4NFUS2N"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 2.Same First and Last\n",
+        "#https://codingbat.com/prob/p179078\n",
+        "def same_first_last(nums):\n",
+        "  if nums == []:\n",
+        "    return False\n",
+        "  if nums[-1] == nums[0]:\n",
+        "    return True\n",
+        "  else:\n",
+        "    return False\n"
+      ],
+      "metadata": {
+        "id": "E8GopYWMHZkH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 2.Same First and Last (one liner)\n",
+        "#https://codingbat.com/prob/p179078\n",
+        "# Short Circuit Evaluation\n",
+        "def same_first_last(nums):\n",
+        "   #return (nums[-1] == nums[0]) and (len(nums) >=1)  # will get index out of range error\n",
+        "   return (len(nums) >=1) and (nums[-1] == nums[0])   # will work due to short-circuit evaluation\n",
+        "\n",
+        ""
+      ],
+      "metadata": {
+        "id": "aPPTYHBmX0be"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 3.make_pi\n",
+        "https://codingbat.com/prob/p113659\n",
+        "def make_pi():\n",
+        "  return [3,1,4]\n"
+      ],
+      "metadata": {
+        "id": "s3NPefewIgVd"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 3.make_pi (one liner)\n",
+        "https://codingbat.com/prob/p113659\n",
+        "def make_pi():\n",
+        "  return [3,1,4]"
+      ],
+      "metadata": {
+        "id": "bv3V0Td3vHyH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 4.common_end\n",
+        "#https://codingbat.com/prob/p147755\n",
+        "def common_end(a, b):\n",
+        "  if a[-1] == b[-1]:\n",
+        "    return True\n",
+        "  if a[0] == b[0]:\n",
+        "    return True\n",
+        "#if it comes here, it will return false\n",
+        "  return False"
+      ],
+      "metadata": {
+        "id": "wt0-ymBkJf9O"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 4.common_end (one liner)\n",
+        "#https://codingbat.com/prob/p147755\n",
+        "def common_end(a, b):\n",
+        "  return a[-1] == b[-1] or a[0] == b[0]"
+      ],
+      "metadata": {
+        "id": "fEcH9EcGmpKn"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 5.sum3\n",
+        "#https://codingbat.com/prob/p191645\n",
+        "def sum3(nums):\n",
+        "  nums_sum = sum(nums)\n",
+        "  return nums_sum"
+      ],
+      "metadata": {
+        "id": "wOTVjb5sJ9bc"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 5.sum3 (one liner)\n",
+        "#https://codingbat.com/prob/p191645\n",
+        "def sum3(nums):\n",
+        "  return sum(nums)"
+      ],
+      "metadata": {
+        "id": "4eo-sAvKvQVu"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 6.rotate_left3\n",
+        "#https://codingbat.com/prob/p148661\n",
+        "def rotate_left3(nums):\n",
+        "  nums_list = [nums[1], nums[2], nums[0]]\n",
+        "  return nums_list\n",
+        "#how can we enhance this program so it works for input lists of any length"
+      ],
+      "metadata": {
+        "id": "wgD1sYBtKrG7"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 6.rotate_left3 (one liner)\n",
+        "#https://codingbat.com/prob/p148661\n",
+        "def rotate_left3(nums):\n",
+        "  return [nums[1], nums[2], nums[0]]\n"
+      ],
+      "metadata": {
+        "id": "ireqo5ANm3TO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 7.reverse3\n",
+        "#https://codingbat.com/prob/p192962\n",
+        "def reverse3(nums):\n",
+        "  nums.reverse()\n",
+        "  return nums"
+      ],
+      "metadata": {
+        "id": "q_kSri3gL-3X"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 7.reverse3 (one liner)\n",
+        "#https://codingbat.com/prob/p192962\n",
+        "def reverse3(nums):\n",
+        "  return nums.reverse()"
+      ],
+      "metadata": {
+        "id": "738rgw5tvY84"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 8.max_end\n",
+        "#https://codingbat.com/prob/p135290\n",
+        "def max_end3(nums):\n",
+        "  if nums[0] > nums[-1]:\n",
+        "    max_element = nums[0]\n",
+        "  else:\n",
+        "    max_element = nums[-1]\n",
+        "  max_list = [max_element, max_element, max_element]\n",
+        "  return max_list"
+      ],
+      "metadata": {
+        "id": "jXa86_44MlpK"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 8.max_end (one liner)\n",
+        "#https://codingbat.com/prob/p135290\n",
+        "def max_end3(nums):\n",
+        "  return [max(nums[0], nums[-1])] * 3"
+      ],
+      "metadata": {
+        "id": "RqwlvL4Vn9rv"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 9.sum2\n",
+        "#https://codingbat.com/prob/p192589\n",
+        "def sum2(nums):\n",
+        "  if len(nums) == 0:\n",
+        "    return 0\n",
+        "  if len(nums) < 2:\n",
+        "    return sum(nums)\n",
+        "  else:\n",
+        "    return nums[0] + nums[1]\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "zXYF9PsuPnc3"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 9.sum2 (one liner)\n",
+        "#https://codingbat.com/prob/p192589\n",
+        "def sum2(nums):\n",
+        "    return 0 if len(nums) == 0 else sum(nums) if len(nums) < 2 else nums[0] + nums[1]\n"
+      ],
+      "metadata": {
+        "id": "Bdx1EqStgJf4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 10.middle_way\n",
+        "#https://codingbat.com/prob/p171011\n",
+        "def middle_way(a, b):\n",
+        "  mid_a = a[1]\n",
+        "  mid_b = b[1]\n",
+        "  new_list = [mid_a, mid_b]\n",
+        "  return new_list\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "QRn96bXuRBd3"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 10.middle_way (one liner)\n",
+        "#https://codingbat.com/prob/p171011\n",
+        "def middle_way(a, b):\n",
+        "  return [a[1], b[1]]"
+      ],
+      "metadata": {
+        "id": "PywVAJk4vrl4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 11.make_ends\n",
+        "#https://codingbat.com/prob/p124806\n",
+        "def make_ends(nums):\n",
+        "  end_1 = nums[0]\n",
+        "  end_2 = nums[-1]\n",
+        "  new_list = [end_1, end_2]\n",
+        "  return new_list"
+      ],
+      "metadata": {
+        "id": "Hg7K9x9KRjZr"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 11.make_ends (one liner)\n",
+        "#https://codingbat.com/prob/p124806\n",
+        "def make_ends(nums):\n",
+        "  return [nums[0], nums[-1]]"
+      ],
+      "metadata": {
+        "id": "ME2SEq9sv4vF"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 12.has23\n",
+        "#https://codingbat.com/prob/p177892\n",
+        "def has23(nums):\n",
+        "  if 2 in nums:\n",
+        "    return True\n",
+        "  if 3 in nums:\n",
+        "    return True\n",
+        "  return False\n"
+      ],
+      "metadata": {
+        "id": "UhNbnwaKSC5A"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 12.has23 (one liner)\n",
+        "#https://codingbat.com/prob/p177892\n",
+        "def has23(nums):\n",
+        "  return True if 2 in nums or 3 in nums else False"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2wjvbHd7gy1Q",
+        "outputId": "d482756d-d203-4a75-f494-624c2bf151c5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x is 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 13.counts_even\n",
+        "#https://codingbat.com/prob/p189616\n",
+        "def count_evens(nums):\n",
+        "  evens_count = 0\n",
+        "  for element in nums:\n",
+        "    if element % 2 == 0:\n",
+        "      evens_count = evens_count + 1\n",
+        "\n",
+        "  return evens_count\n"
+      ],
+      "metadata": {
+        "id": "_skd3DuDS10J"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 13.counts_even (one liner)\n",
+        "#https://codingbat.com/prob/p189616\n",
+        "def count_evens(nums):\n",
+        "  return len([x for x in nums if x % 2 == 0])"
+      ],
+      "metadata": {
+        "id": "3H-1xenAiLYi"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 14.big_diff\n",
+        "#https://codingbat.com/prob/p184853\n",
+        "def big_diff(nums):\n",
+        "  difference = max(nums) - min(nums)\n",
+        "  return difference"
+      ],
+      "metadata": {
+        "id": "nrXkcB8mUv-H"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 14.big_diff (one liner)\n",
+        "#https://codingbat.com/prob/p184853\n",
+        "def big_diff(nums):\n",
+        "  return max(nums) - min(nums)"
+      ],
+      "metadata": {
+        "id": "ctr-OvqAwJEW"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 15.centered_average\n",
+        "#https://codingbat.com/prob/p126968\n",
+        "def centered_average(nums):\n",
+        "  nums.remove(max(nums))\n",
+        "  nums.remove(min(nums))\n",
+        "  nums_sum = sum(nums)\n",
+        "  average = nums_sum / len(nums)\n",
+        "  return average\n",
+        ""
+      ],
+      "metadata": {
+        "id": "cHD0AbHbVhzY"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 15.centered_average (one liner)\n",
+        "#https://codingbat.com/prob/p126968\n",
+        "def centered_average(nums):\n",
+        "  return sum(sorted(nums)[1:-1]) / (len(nums)-2)\n",
+        ""
+      ],
+      "metadata": {
+        "id": "WMD0HNtnmYR4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 16.sum13\n",
+        "#https://codingbat.com/prob/p167025\n",
+        "\n",
+        "def sum13(nums):\n",
+        "  i = 0\n",
+        "  total = 0\n",
+        "\n",
+        "  while i < len(nums):\n",
+        "    current_number = nums[i]\n",
+        "    if current_number == 13:\n",
+        "      i = i + 2\n",
+        "      continue\n",
+        "    total = total + current_number\n",
+        "    i = i + 1\n",
+        "\n",
+        "  return total"
+      ],
+      "metadata": {
+        "id": "JMRjMvciWkcy"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 16.sum13 (one liner)\n",
+        "#https://codingbat.com/prob/p167025\n",
+        "def sum13(nums):\n",
+        "    return sum(nums[i] for i in range(len(nums)) if nums[i] != 13 and (i == 0 or nums[i-1] != 13))\n"
+      ],
+      "metadata": {
+        "id": "C7wLmv8royLg"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 17.sum67\n",
+        "#https://codingbat.com/prob/p108886\n",
+        "def sum67(nums):\n",
+        "\n",
+        "  total = 0\n",
+        "  skip_flag = False\n",
+        "  for i in range(len(nums)):\n",
+        "    current_number = nums[i]\n",
+        "    if current_number == 6:\n",
+        "      skip_flag = True\n",
+        "      continue\n",
+        "\n",
+        "    if current_number == 7:\n",
+        "      if skip_flag == True:\n",
+        "        skip_flag = False\n",
+        "        continue\n",
+        "\n",
+        "    if skip_flag == False:\n",
+        "      total = total + current_number\n",
+        "\n",
+        "  return total\n",
+        ""
+      ],
+      "metadata": {
+        "id": "AvaUGzKq26Jj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 17.sum67 (one liner - not working)\n",
+        "#https://codingbat.com/prob/p108886\n",
+        "def sum67(nums):\n",
+        "    return sum(nums[i] for i in range(len(nums)) if not (6 <= nums[i] <= 7) or (nums[i] == 6 and i < len(nums)-1 and nums[i+1] == 7))\n"
+      ],
+      "metadata": {
+        "id": "qUKiTt5-qQ8X"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "yheDyenxqQ-O"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#@title 18.has22\n",
+        "#https://codingbat.com/prob/p119308\n",
+        "def has22(nums):\n",
+        "  length = len(nums)\n",
+        "\n",
+        "  for i in range(length):\n",
+        "    current_number = nums[i]\n",
+        "\n",
+        "    if current_number == 2:\n",
+        "      if i == length -1:  # already at the end of the list\n",
+        "        continue\n",
+        "      i = i + 1\n",
+        "      next_number = nums[i]\n",
+        "      if next_number == 2:\n",
+        "        return True\n",
+        "\n",
+        "  return False"
+      ],
+      "metadata": {
+        "id": "2WHyrTek26Wd"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
